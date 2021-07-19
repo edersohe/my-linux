@@ -8,11 +8,6 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
 
 default_border pixel 1
 
@@ -94,22 +89,12 @@ exec swayidle -w \
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
@@ -184,12 +169,6 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
     bindsym Up resize shrink height 10px
@@ -221,22 +200,22 @@ bindsym $mod+Shift+r mode "resize"
     #}
 #}
 
-#bindsym $mod+p exec qutebrowser --no-err-windows --target private-window google.com
-#bindsym $mod+w exec qutebrowser --no-err-windows --target tab google.com
+bindsym $mod+p exec qutebrowser --no-err-windows --target private-window google.com
+bindsym $mod+w exec qutebrowser --no-err-windows --target tab google.com
 #bindsym $mod+p exec google-chrome-stable --incognito google.com
 #bindsym $mod+w exec google-chrome-stable google.com
-bindsym $mod+shift+p exec kitty-menu fzf-gopass
-bindsym $mod+p exec grim -g "$(slurp)"
-bindsym $mod+w exec luakit
+#bindsym $mod+shift+p exec kitty-menu fzf-gopass
+bindsym $mod+shift+p exec grim -g "$(slurp)"
 bindsym $mod+n exec kitty --class "ranger" ranger
 bindsym $mod+t exec kitty-menu fzf-window-switcher
-bindsym $mod+q exec kitty-menu fzf-qutebrowser-quickmarks
-bindsym $mod+b exec swaylock -f -c 000000
+bindsym $mod+b exec kitty-menu fzf-qutebrowser-quickmarks
+bindsym $mod+l exec swaylock -f -c 000000
 
 assign [app_id=kitty] number 1
 assign [app_id=org.qutebrowser.qutebrowser] number 2
 assign [class=Google-chrome] number 2
 assign [app_id=luakit] number 2
+assign [app_id=vimb] number 2
 assign [app_id=ranger] number 3
 assign [app_id=virt-manager] number 4
 
@@ -244,6 +223,7 @@ for_window [app_id=kitty] focus
 for_window [app_id=luakit] focus
 for_window [app_id=org.qutebrowser.qutebrowser] focus
 for_window [class=Google-chrome] focus
+for_window [app_id=vimb] focus
 for_window [app_id=ranger] focus
 for_window [app_id=menu] focus
 for_window [app_id=virt-manager] focus
