@@ -13,7 +13,7 @@ an executable
 O.format_on_save = true
 O.lint_on_save = true
 O.completion.autocomplete = true
-O.colorscheme = "spacegray"
+O.colorscheme = "nord"
 O.default_options.wrap = true
 O.default_options.timeoutlen = 100
 -- keymappings
@@ -116,6 +116,10 @@ O.lang.latex.latexindent.modify_line_breaks = false
 --         event = "InsertEnter"
 --     }
 -- }
+
+O.user_plugins = {
+    {"christianchiarulli/nvcode-color-schemes.vim"},
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
