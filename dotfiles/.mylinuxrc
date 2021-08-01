@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=lvim
+export VISUAL=lvim
 export TERM=xterm-kitty
 export PAGER="bat -p"
 export BAT_PAGER="less -RFXI"

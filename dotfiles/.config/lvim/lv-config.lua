@@ -132,3 +132,5 @@ O.user_plugins = {
 --     b = { "<cmd>echo 'second custom command'<cr>", "Description for b" },
 --   },
 -- }
+
+O.clipboard = "unnamedplus"
