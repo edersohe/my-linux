@@ -7,9 +7,10 @@ export PAGER="bat -p"
 export BAT_PAGER="less -RFXI"
 export BAT_THEME="Nord"
 export MANPAGER=bat-man-pager
-export PATH=$HOME/.scripts:$HOME/go/bin:$HOME/.local/bin:/usr/lib/psql13/bin/:$HOME/.gem/ruby/2.7.0/bin:$HOME/Projects/flutter/bin:$HOME/Software/android-studio/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$HOME/.scripts:$HOME/go/bin:$HOME/.local/bin:/usr/lib/psql13/bin/:$HOME/.gem/ruby/2.7.0/bin:$HOME/Projects/flutter/bin:$HOME/Software/android-studio/bin:$PATH
 export GO111MODULE="on"
 export CHROME_EXECUTABLE="google-chrome-stable"
+export MOZ_ENABLE_WAYLAND=1
 
 [ -f "$HOME/.cargo/env" ] && . $HOME/.cargo/env
 
